@@ -94,7 +94,7 @@ Con dos sesiones abiertas (la mía, **dmartin**, en mi ordenador y la de **vmart
 | 1 | La etiqueta "institut" existe | Sale en la columna de la izquierda, de color verde | ✅ Correcto |
 | 2 | Filtro 1: un correo que contiene "puig" | Le pone la etiqueta "institut" | ✅ Correcto (el correo de Moodle del Institut Puig Castellar tiene la etiqueta) |
 | 3 | vmartinez envía "Prova filtre puig" | Llega con la etiqueta "institut" | ✅ Correcto |
-| 4 | Filtro 2: un correo que contiene "publicitat" | No pasa por Recibidos y va a Promociones | ⏳ Pendiente |
+| 4 | Filtro 2: un correo que contiene "publicitat" | No pasa por Recibidos y va a Promociones | ✅ Correcto: "Oferta publicidad" de vmartinez (el texto dice "publicitat") no sale en Recibidos y está en Promociones. También lleva "institut" y la ⭐ (filtros 1 y 5) |
 | 5 | Filtro 3: un correo de rusben@elpuig.xeill.net | Se marca como importante | ✅ Correcto: los 3 correos de rusben tienen el marcador de importancia |
 | 6 | Filtro 4: un correo de caridadcastillo@elpuig.xeill.net | Se marca como importante | ✅ Correcto: los 11 correos de la tutora tienen el marcador de importancia |
 | 7 | Filtro 5: un correo de vmartinez@elpuig.xeill.net | Se destaca con una ⭐ | ✅ Correcto |
@@ -104,6 +104,7 @@ Con dos sesiones abiertas (la mía, **dmartin**, en mi ordenador y la de **vmart
 | 11 | Comprobar el acceso IMAP | En Configuración sale el apartado "Acceso IMAP" | ✅ Correcto |
 | 12 | Ver el original de un correo | Salen SPF, DKIM y DMARC | ✅ Correcto (SPF PASS, DKIM PASS, DMARC FAIL) |
 
+![Prueba filtro 2](Prueba%20filtro%202%20publicitat.png)
 ![Prueba filtro 3](Prueba%20filtro%203%20rusben.png)
 ![Prueba filtro 4](Prueba%20filtro%204%20caridadcastillo.png)
 
@@ -259,7 +260,9 @@ Lista **"Reservas viaje Portugal"** en Google Tasks, con 8 tareas y su fecha lí
 
 ![Calendario compartido](Compartir%20calendario.png)
 
-_(pendiente: captura del calendario visto desde la cuenta del compañero)_
+**Calendario visto desde la cuenta de vmartinez:** le sale CALENDARI_DANIEL_MARTIN_MARRUPE en "Otros calendarios", con todos los eventos del viaje (en catalán, porque tiene Calendar en ese idioma):
+
+![vmartinez ve mi calendario](vmartinez%20ve%20mi%20calendario.jpg)
 
 ## Fase 4: Permisos y pruebas
 
@@ -303,7 +306,7 @@ Prueba de la fórmula IF superando el presupuesto (prueba nº 14):
 | 8 | Lista de tareas "Reservas viaje Portugal" | Tiene 8 tareas con fecha límite | ✅ Correcto |
 | 9 | Las tareas salen en el calendario | Cada tarea sale el día de su fecha límite | ✅ Correcto: salen como "Vencimiento" los días 1, 10, 15 y 21 de diciembre |
 | 10 | Compartir el calendario con vmartinez | Tiene el permiso "Ver todos los detalles" | ✅ Correcto |
-| 11 | vmartinez abre mi calendario desde su cuenta | Ve los eventos con todos los detalles, pero no los puede editar | ⏳ Pendiente |
+| 11 | vmartinez abre mi calendario desde su cuenta | Ve los eventos con todos los detalles, pero no los puede editar | ✅ Correcto: le salen todos los eventos del 22 al 28 en su calendario |
 | 12 | Permisos de la hoja del presupuesto | Solo rusben como Comentador; acceso general Restringido | ✅ Correcto |
 | 13 | Abrir el enlace de la hoja en incógnito, sin cuenta | No se ve la hoja: pide iniciar sesión o sale "Necesitas acceso" | ✅ Correcto: redirige a la pantalla de inicio de sesión de Google y no se ve ningún dato |
 | 14 | Cambiar un precio para que el total pase de 1.500 € | La celda IF cambia a "T'has passat" | ✅ Correcto: con la comida a 200 € el total sube a 1.920 € y sale "T'has passat". Después he vuelto a dejar 40 € |
