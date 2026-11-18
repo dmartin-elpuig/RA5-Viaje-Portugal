@@ -80,12 +80,12 @@ Con dos sesiones abiertas (la mía, **dmartin**, en mi ordenador y la de **vmart
 
 2. A vmartinez **le llega mi respuesta automática** de vacaciones.
 
-![Respuesta automática recibida por vmartinez](Capturas%20vmartinez/vmartinez%20respuesta%20automatica.jpg)
+![Respuesta automática recibida por vmartinez](vmartinez%20respuesta%20automatica.jpg)
 
 3. **Le respondo** y mi respuesta le llega en la **misma conversación**.
 
 ![Respuesta enviada](Prueba%20respuesta%20enviada.png)
-![Respuesta recibida por vmartinez](Capturas%20vmartinez/vmartinez%20respuesta%20recibida.jpg)
+![Respuesta recibida por vmartinez](vmartinez%20respuesta%20recibida.jpg)
 
 ### 5. Lista de pruebas: correo
 
@@ -228,7 +228,7 @@ Calendario creado en la cuenta del instituto (organización elpuig.xeill.net), c
 
 vmartinez recibe la invitación y responde **"Sí"**. En mi evento sale **"1 sí"** con un ✓ verde al lado de su nombre:
 
-![Invitación recibida por vmartinez](Capturas%20vmartinez/vmartinez%20invitacion%20recibida.jpg)
+![Invitación recibida por vmartinez](vmartinez%20invitacion%20recibida.jpg)
 ![Invitado acepta](Invitado%20acepta.png)
 
 ### 6. Lista de tareas: reservas
