@@ -1,0 +1,127 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//P5.1 Viaje Portugal//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:viaje-portugal-0@p51
+DTSTAMP:20261118T170000Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261229
+TRANSP:TRANSPARENT
+SUMMARY:Viaje a Portugal (22-28 dic)
+LOCATION:Portugal
+DESCRIPTION:Inicio: 22/12/2026 - Final: 28/12/2026. Ruta: Barcelona - Lisb
+ oa - Sintra - Coimbra - Oporto - Barcelona. Presupuesto: 800 € de 1.500
+  €.
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-1@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261222T090000Z
+DTEND:20261222T200000Z
+SUMMARY:Día 1 · Vuelo Barcelona → Lisboa
+LOCATION:Aeropuerto de Barcelona-El Prat\, Barcelona
+DESCRIPTION:10:00 vuelo BCN → LIS (llegada 11:00 hora de Lisboa). Check-
+ in en el hostal de Lisboa. Tarde: Baixa\, Praça do Comércio y Elevador 
+ de Santa Justa. Transporte: avión.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 1 · Vuelo Barcelona → Lisboa
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-2@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261223T090000Z
+DTEND:20261223T200000Z
+SUMMARY:Día 2 · Lisboa: Alfama y Belém
+LOCATION:Lisboa\, Portugal
+DESCRIPTION:Tranvía 28 hasta Alfama. Castelo de São Jorge y miradores. T
+ arde en Belém: Torre de Belém\, Monasterio de los Jerónimos y pasteles
+  de Belém. Transporte: tranvía y bono de transporte.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 2 · Lisboa: Alfama y Belém
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-3@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261224T090000Z
+DTEND:20261224T190000Z
+SUMMARY:Día 3 · Excursión a Sintra
+LOCATION:Sintra\, Portugal
+DESCRIPTION:Tren desde la estación de Rossio (40 min). Palacio da Pena y 
+ Quinta da Regaleira. Vuelta a Lisboa en tren. Cena de Nochebuena. Transpo
+ rte: tren.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 3 · Excursión a Sintra
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-4@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261225T100000Z
+DTEND:20261225T200000Z
+SUMMARY:Día 4 · Tren Lisboa → Coimbra
+LOCATION:Coimbra\, Portugal
+DESCRIPTION:10:00 tren Lisboa Santa Apolónia → Coimbra (2 h). Check-in 
+ en el hostal. Paseo por la ciudad vieja y la Universidad de Coimbra. Tran
+ sporte: tren.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 4 · Tren Lisboa → Coimbra
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-5@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261226T100000Z
+DTEND:20261226T200000Z
+SUMMARY:Día 5 · Tren Coimbra → Oporto
+LOCATION:Oporto\, Portugal
+DESCRIPTION:10:00 tren Coimbra → Oporto (1 h). Check-in en el hostal. Li
+ vraria Lello\, Torre dos Clérigos y estación de São Bento. Transporte:
+  tren.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 5 · Tren Coimbra → Oporto
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-6@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261227T090000Z
+DTEND:20261227T200000Z
+SUMMARY:Día 6 · Oporto: Ribeira y bodegas
+LOCATION:Ribeira\, Oporto\, Portugal
+DESCRIPTION:Barrio de la Ribeira\, Puente Don Luis I y visita a una bodega
+  de vino de Oporto en Vila Nova de Gaia. Transporte: a pie.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 6 · Oporto: Ribeira y bodegas
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:viaje-portugal-7@p51
+DTSTAMP:20261118T170000Z
+DTSTART:20261228T090000Z
+DTEND:20261228T180000Z
+SUMMARY:Día 7 · Vuelo Oporto → Barcelona
+LOCATION:Aeropuerto Francisco Sá Carneiro\, Oporto
+DESCRIPTION:Mañana: Mercado do Bolhão. 16:00 vuelo OPO → BCN (llegada 
+ 19:00 hora de Barcelona). Vuelta a casa. Transporte: avión.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Día 7 · Vuelo Oporto → Barcelona
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
