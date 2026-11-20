@@ -57,7 +57,7 @@ Puertos seguros: IMAP 993 (SSL) y POP3 995 (SSL).
 
 ### 5. Respuesta automática de vacaciones
 
-Mensaje: **«Estoy de Vacaciones»** (el profesor dio permiso para escribirlo en castellano en lugar de «Estic de vacances!»). Solo se envía a usuarios de elpuig.xeill.net.
+Mensaje: **«Estoy de Vacaciones»**  Solo se envía a usuarios de elpuig.xeill.net.
 
 ![Respuesta automática](Respuesta%20automatica%20Vacaciones.png)
 
@@ -135,7 +135,7 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 ### 1. Ruta en Google Maps
 
-🗺️ **Enlace al mapa:** https://www.google.com/maps/d/viewer?mid=19x9eXK1ArPYjqu62ac_z7aL6iXn6FLU
+**Enlace al mapa:** https://www.google.com/maps/d/viewer?mid=19x9eXK1ArPYjqu62ac_z7aL6iXn6FLU
 
 > El mapa está hecho con mi cuenta personal de Google porque en la cuenta del instituto (elpuig.xeill.net) Google Maps está restringido.
 
@@ -224,7 +224,7 @@ Calendario creado en la cuenta del instituto (organización elpuig.xeill.net), c
 
 ### 5. Prestaciones del calendario
 
-**Evento que se repite y tiene final:** "Llamar a casa 📞", **cada día** a las 21:00, **hasta el 28/12/2026**.
+**Evento que se repite y tiene final:** "Llamar a casa ", **cada día** a las 21:00, **hasta el 28/12/2026**.
 
 ![Evento repetido](Evento%20repetido.png)
 
