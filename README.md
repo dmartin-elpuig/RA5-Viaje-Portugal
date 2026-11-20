@@ -135,7 +135,7 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 ### 1. Ruta en Google Maps
 
-**Enlace al mapa:** https://www.google.com/maps/d/viewer?mid=19x9eXK1ArPYjqu62ac_z7aL6iXn6FLU
+**Enlace al mapa:** https://www.google.com/maps/d/edit?mid=145A6VuzUpB4-RtovZv1PJ7c_u61YdXY&usp=sharing
 
 > El mapa está hecho con mi cuenta personal de Google porque en la cuenta del instituto (elpuig.xeill.net) Google Maps está restringido.
 
