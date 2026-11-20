@@ -1,6 +1,9 @@
 # P5.1 · El viaje con Google — Portugal 
 
-**Alumno:** Daniel Martin Marrupe · **Cuenta:** dmartin@elpuig.xeill.net
+**Alumno:** Daniel Martin Marrupe · 
+
+**Cuenta:** dmartin@elpuig.xeill.net
+
 **Compañero de pruebas:** vmartinez@elpuig.xeill.net
 
 **Módulo:** 0228 Aplicaciones Web · RA5
