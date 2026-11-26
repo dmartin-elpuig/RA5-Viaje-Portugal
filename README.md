@@ -35,7 +35,7 @@
 IMAP va mejor si usas varios dispositivos. POP3 sirve si solo usas uno o quieres tener los correos guardados en local.
 Puertos seguros: IMAP 993 (SSL) y POP3 995 (SSL).
 
-### 3. Etiqueta «institut» (verde)
+### 3. Etiqueta "institut" (verde)
 
 ![Etiqueta institut](Etiqueta%20institut%20Gmail.png)
 
@@ -57,7 +57,7 @@ Puertos seguros: IMAP 993 (SSL) y POP3 995 (SSL).
 
 ### 5. Respuesta automática de vacaciones
 
-Mensaje: **«Estoy de Vacaciones»**  Solo se envía a usuarios de elpuig.xeill.net.
+Mensaje: **"Estoy de Vacaciones"**  Solo se envía a usuarios de elpuig.xeill.net.
 
 ![Respuesta automática](Respuesta%20automatica%20Vacaciones.png)
 
@@ -137,7 +137,6 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 **Enlace al mapa:** https://www.google.com/maps/d/edit?mid=145A6VuzUpB4-RtovZv1PJ7c_u61YdXY&usp=sharing
 
-> El mapa está hecho con mi cuenta personal de Google porque en la cuenta del instituto (elpuig.xeill.net) Google Maps está restringido.
 
 | Día | Ruta | Transporte | Dónde se duerme |
 |---|---|---|---|
