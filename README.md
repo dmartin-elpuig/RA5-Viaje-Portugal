@@ -8,7 +8,7 @@
 
 **Módulo:** 0228 Aplicaciones Web RA5
 
-**[Carpeta del proyecto](https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-?usp=sharing]**
+**[Carpeta del proyecto](https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-?usp=sharing)**
 
 **[Calendario](https://calendar.google.com/calendar/u/0?cid=Y19lNmJlYjU3YTQ1YTY3OTZlMTM3MGU3OTIzOWUxYjQ0MWJmOTU5YjQ3ZTFhNmFlMDBiMWUxNDI5NzllMTA4MTBmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)**
 
