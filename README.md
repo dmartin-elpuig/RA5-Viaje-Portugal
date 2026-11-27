@@ -157,7 +157,8 @@ El mapa tiene dos capas: **Paradas** (6 puntos) y **Trayectos** (5 líneas, cada
 
 ### 2. Presupuesto en Google Sheets
 
- **[Enlace a la hoja](https://docs.google.com/spreadsheets/d/1DX9Zfmc3x8qNh0Wra62YNPtVeDOB9kaXfz4WBje3BJk/edit)
+ **[Enlace a la hoja](https://docs.google.com/spreadsheets/d/1DX9Zfmc3x8qNh0Wra62YNPtVeDOB9kaXfz4WBje3BJk/edit)**
+ 
  **[Carpeta de Drive](https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-)**
 
 | Categoría | Total |
