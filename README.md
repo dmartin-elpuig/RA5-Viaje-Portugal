@@ -8,7 +8,7 @@
 
 **Módulo:** 0228 Aplicaciones Web RA5
 
-**Carpeta del proyecto** https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-?usp=sharing
+**[Carpeta del proyecto](https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-?usp=sharing]**
 
 **[Calendario](https://calendar.google.com/calendar/u/0?cid=Y19lNmJlYjU3YTQ1YTY3OTZlMTM3MGU3OTIzOWUxYjQ0MWJmOTU5YjQ3ZTFhNmFlMDBiMWUxNDI5NzllMTA4MTBmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)**
 
@@ -135,7 +135,7 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 ### 1. Ruta en Google Maps
 
-**Enlace al mapa:** https://www.google.com/maps/d/edit?mid=145A6VuzUpB4-RtovZv1PJ7c_u61YdXY&usp=sharing
+**[Enlace al mapa](https://www.google.com/maps/d/edit?mid=145A6VuzUpB4-RtovZv1PJ7c_u61YdXY&usp=sharing)**
 
 
 | Día | Ruta | Transporte | Dónde se duerme |
@@ -157,8 +157,8 @@ El mapa tiene dos capas: **Paradas** (6 puntos) y **Trayectos** (5 líneas, cada
 
 ### 2. Presupuesto en Google Sheets
 
- **Enlace a la hoja:** https://docs.google.com/spreadsheets/d/1DX9Zfmc3x8qNh0Wra62YNPtVeDOB9kaXfz4WBje3BJk/edit
- **Carpeta de Drive:** https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-
+ **[Enlace a la hoja](https://docs.google.com/spreadsheets/d/1DX9Zfmc3x8qNh0Wra62YNPtVeDOB9kaXfz4WBje3BJk/edit)
+ **[Carpeta de Drive](https://drive.google.com/drive/folders/1k93L7iVusqR1FFJSyKd43hvzHzU6Qxd-)**
 
 | Categoría | Total |
 |---|---|
