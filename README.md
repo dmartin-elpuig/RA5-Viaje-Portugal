@@ -326,6 +326,8 @@ Prueba de la fórmula IF superando el presupuesto (prueba nº 14):
 
 ## Para subir nota: itinerario en HTML (GitHub Pages)
 
-He creado una página web con el itinerario del viaje, publicada con GitHub Pages:
+He creado una página web con el itinerario del viaje, publicada con GitHub Pages. **Haz clic en la imagen para abrirla:**
 
-### 🌐 [Ver la página del viaje a Portugal](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/)
+[![Página web del viaje a Portugal](img/vista-previa.png)](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/)
+
+### 🌐 [Abrir la página del viaje a Portugal](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/)
