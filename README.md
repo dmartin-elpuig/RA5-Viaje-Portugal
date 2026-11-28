@@ -328,6 +328,6 @@ Prueba de la fórmula IF superando el presupuesto (prueba nº 14):
 
 He creado una página web con el itinerario del viaje, publicada con GitHub Pages. **Haz clic en la imagen para abrirla:**
 
-[![Página web del viaje a Portugal](img/vista-previa.png)](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/viaje.html)
-
 ### 🌐 [Abrir la página del viaje a Portugal](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/viaje.html)
+
+[![Página web del viaje a Portugal](img/vista-previa.png)](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/viaje.html)
