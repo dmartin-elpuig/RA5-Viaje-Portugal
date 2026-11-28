@@ -47,7 +47,7 @@ Puertos seguros: IMAP 993 (SSL) y POP3 995 (SSL).
 | 2 | Contiene `publicitat` | Saltar Recibidos y categorizar como **Promociones** |
 | 3 | De `rusben@elpuig.xeill.net` | Marcar como **importante** |
 | 4 | De `caridadcastillo@elpuig.xeill.net` | Marcar como **importante** |
-| 5 | De `vmartinez@elpuig.xeill.net` | **Destacar**  |
+| 5 | De `vmartinez@elpuig.xeill.net` | **Destacar** (estrella) |
 
 ![Filtro 1](Filtro%201%20Puig.png)
 ![Filtro 2](Filtro%202%20Publicitat.png)
@@ -96,27 +96,6 @@ Con dos sesiones abiertas (la mía, **dmartin**, en mi ordenador y la de **vmart
 ![Respuesta enviada](Prueba%20respuesta%20enviada.png)
 ![Respuesta recibida por vmartinez](vmartinez%20respuesta%20recibida.jpg)
 
-### 5. Lista de pruebas: correo
-
-| # | Prueba | Resultado esperado | Resultado obtenido |
-|---|---|---|---|
-| 1 | La etiqueta "institut" existe | Sale en la columna de la izquierda, de color verde |  Correcto |
-| 2 | Filtro 1: un correo que contiene "puig" | Le pone la etiqueta "institut" |  Correcto (el correo de Moodle del Institut Puig Castellar tiene la etiqueta) |
-| 3 | vmartinez envía "Prova filtre puig" | Llega con la etiqueta "institut" |  Correcto |
-| 4 | Filtro 2: un correo que contiene "publicitat" | No pasa por Recibidos y va a Promociones |  Correcto: "Oferta publicidad" de vmartinez (el texto dice "publicitat") no sale en Recibidos y está en Promociones. También lleva "institut" y la  (filtros 1 y 5) |
-| 5 | Filtro 3: un correo de rusben@elpuig.xeill.net | Se marca como importante |  Correcto: los 3 correos de rusben tienen el marcador de importancia |
-| 6 | Filtro 4: un correo de caridadcastillo@elpuig.xeill.net | Se marca como importante |  Correcto: los 11 correos de la tutora tienen el marcador de importancia |
-| 7 | Filtro 5: un correo de vmartinez@elpuig.xeill.net | Se destaca con una  |  Correcto |
-| 8 | Respuesta automática activada | Arriba de Gmail sale la barra amarilla "Vacaciones" |  Correcto |
-| 9 | vmartinez me escribe | Le llega la respuesta automática de vacaciones |  Correcto: le llega "Estoy de Vacaciones" |
-| 10 | Respondo al correo de vmartinez | Le llega mi respuesta en la misma conversación |  Correcto |
-| 11 | Comprobar el acceso IMAP | En Configuración sale el apartado "Acceso IMAP" |  Correcto |
-| 12 | Ver el original de un correo | Salen SPF, DKIM y DMARC |  Correcto (SPF PASS, DKIM PASS, DMARC FAIL) |
-
-![Prueba filtro 2](Prueba%20filtro%202%20publicitat.png)
-![Prueba filtro 3](Prueba%20filtro%203%20rusben.png)
-![Prueba filtro 4](Prueba%20filtro%204%20caridadcastillo.png)
-
 ### 4. Original de un mensaje: SPF, DKIM y DMARC
 
 He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castellar: Compte d'usuari nou"*.
@@ -125,11 +104,34 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 | Comprobación | Resultado | Qué es |
 |---|---|---|
-| **SPF** (Sender Policy Framework) |  PASS con la IP 54.240.4.3 | Un registro DNS del dominio que dice **qué servidores (IP) pueden enviar correo** en su nombre. El servidor que recibe el correo comprueba si la IP de quien lo envía está en esa lista. |
-| **DKIM** (DomainKeys Identified Mail) |  PASS con el dominio amazonses.com | El servidor que envía **firma el correo con una clave privada**, y quien lo recibe comprueba la firma con la clave pública publicada en el DNS. Así se sabe que el mensaje **no se ha modificado** por el camino. |
-| **DMARC** (Domain-based Message Authentication, Reporting and Conformance) |  FAIL | Una política DNS que exige que el dominio del **"De:"** visible **coincida (esté alineado)** con el dominio que ha pasado SPF o DKIM. También dice qué hacer si falla (`none`, `quarantine` o `reject`). |
+| **SPF** (Sender Policy Framework) | PASS con la IP 54.240.4.3 | Un registro DNS del dominio que dice **qué servidores (IP) pueden enviar correo** en su nombre. El servidor que recibe el correo comprueba si la IP de quien lo envía está en esa lista. |
+| **DKIM** (DomainKeys Identified Mail) | PASS con el dominio amazonses.com | El servidor que envía **firma el correo con una clave privada**, y quien lo recibe comprueba la firma con la clave pública publicada en el DNS. Así se sabe que el mensaje **no se ha modificado** por el camino. |
+| **DMARC** (Domain-based Message Authentication, Reporting and Conformance) | FAIL | Una política DNS que exige que el dominio del **"De:"** visible **coincida (esté alineado)** con el dominio que ha pasado SPF o DKIM. También dice qué hacer si falla (`none`, `quarantine` o `reject`). |
 
 **¿Por qué falla DMARC si SPF y DKIM pasan?** El correo lo envía Moodle a través de **Amazon SES**. SPF y DKIM se validan con el dominio de Amazon (`amazonses.com`), pero en el campo **"De:"** pone `noreply@newmoodle.elpuig.xeill.net`. Como los dominios **no coinciden**, DMARC falla. Aun así, el correo ha llegado a la bandeja de entrada porque la política DMARC del dominio no manda rechazarlo. Para arreglarlo, el instituto tendría que configurar Amazon SES para firmar con DKIM usando su propio dominio (`elpuig.xeill.net`).
+
+### 5. Lista de pruebas: correo
+
+| # | Prueba | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| 1 | La etiqueta "institut" existe | Sale en la columna de la izquierda, de color verde | Correcto |
+| 2 | Filtro 1: un correo que contiene "puig" | Le pone la etiqueta "institut" | Correcto (el correo de Moodle del Institut Puig Castellar tiene la etiqueta) |
+| 3 | vmartinez envía "Prova filtre puig" | Llega con la etiqueta "institut" | Correcto |
+| 4 | Filtro 2: un correo que contiene "publicitat" | No pasa por Recibidos y va a Promociones | Correcto: "Oferta publicidad" de vmartinez (el texto dice "publicitat") no sale en Recibidos y está en Promociones. También lleva "institut" y la  (filtros 1 y 5) |
+| 5 | Filtro 3: un correo de rusben@elpuig.xeill.net | Se marca como importante | Correcto: los 3 correos de rusben tienen el marcador de importancia |
+| 6 | Filtro 4: un correo de caridadcastillo@elpuig.xeill.net | Se marca como importante | Correcto: los 11 correos de la tutora tienen el marcador de importancia |
+| 7 | Filtro 5: un correo de vmartinez@elpuig.xeill.net | Se destaca con una estrella | Correcto |
+| 8 | Respuesta automática activada | Arriba de Gmail sale la barra amarilla "Vacaciones" | Correcto |
+| 9 | vmartinez me escribe | Le llega la respuesta automática de vacaciones | Correcto: le llega "Estoy de Vacaciones" |
+| 10 | Respondo al correo de vmartinez | Le llega mi respuesta en la misma conversación | Correcto |
+| 11 | Comprobar el acceso IMAP | En Configuración sale el apartado "Acceso IMAP" | Correcto |
+| 12 | Ver el original de un correo | Salen SPF, DKIM y DMARC | Correcto (SPF PASS, DKIM PASS, DMARC FAIL) |
+
+![Prueba filtro 2](Prueba%20filtro%202%20publicitat.png)
+![Prueba filtro 3](Prueba%20filtro%203%20rusben.png)
+![Prueba filtro 4](Prueba%20filtro%204%20caridadcastillo.png)
+
+---
 
 ## Fase 3: El viaje
 
@@ -140,13 +142,13 @@ He abierto **"Mostrar original"** del correo *"Moodle de l'Institut Puig Castell
 
 | Día | Ruta | Transporte | Dónde se duerme |
 |---|---|---|---|
-| 1 | Barcelona → **Lisboa** |  Avión | Lisboa |
-| 2 | Lisboa (Alfama, Belém) |  Tranvía | Lisboa |
-| 3 | Lisboa → **Sintra** → Lisboa |  Tren | Lisboa |
-| 4 | Lisboa → **Coimbra** |  Tren | Coimbra |
-| 5 | Coimbra → **Oporto** |  Tren | Oporto |
-| 6 | Oporto (Ribeira, bodegas) |  A pie | Oporto |
-| 7 | Oporto → **Barcelona** |  Avión | Casa |
+| 1 | Barcelona → **Lisboa** | Avión | Lisboa |
+| 2 | Lisboa (Alfama, Belém) | Tranvía | Lisboa |
+| 3 | Lisboa → **Sintra** → Lisboa | Tren | Lisboa |
+| 4 | Lisboa → **Coimbra** | Tren | Coimbra |
+| 5 | Coimbra → **Oporto** | Tren | Oporto |
+| 6 | Oporto (Ribeira, bodegas) | A pie | Oporto |
+| 7 | Oporto → **Barcelona** | Avión | Casa |
 
 El mapa tiene dos capas: **Paradas** (6 puntos) y **Trayectos** (5 líneas, cada una con su día y su transporte). La ruta **vuelve al punto de salida** (Barcelona).
 
@@ -224,7 +226,7 @@ Calendario creado en la cuenta del instituto (organización elpuig.xeill.net), c
 
 ### 5. Prestaciones del calendario
 
-**Evento que se repite y tiene final:** "Llamar a casa ", **cada día** a las 21:00, **hasta el 28/12/2026**.
+**Evento que se repite y tiene final:** "Llamar a casa", **cada día** a las 21:00, **hasta el 28/12/2026**.
 
 ![Evento repetido](Evento%20repetido.png)
 
@@ -279,11 +281,11 @@ Lista **"Reservas viaje Portugal"** en Google Tasks, con 8 tareas y su fecha lí
 
 | Recurso | Quién tiene acceso | Permiso | ¿Hace falta? |
 |---|---|---|---|
-| Hoja del presupuesto (carpeta de Drive) | rusben@elpuig.xeill.net | Comentador |  Sí, el profesor tiene que verla |
-| Hoja del presupuesto | Acceso general | Restringido |  Nadie más puede abrirla |
-| Calendario | vmartinez@elpuig.xeill.net | Ver todos los detalles |  Sí, lo pide la práctica |
-| Calendario | rusben@elpuig.xeill.net | Ver todos los detalles |  Sí, para que el profesor pueda revisarlo |
-| Mapa (cuenta personal) | Cualquiera con el enlace | Solo ver |  Es la única forma de que lo abran desde la cuenta del instituto |
+| Hoja del presupuesto (carpeta de Drive) | rusben@elpuig.xeill.net | Comentador | Sí, el profesor tiene que verla |
+| Hoja del presupuesto | Acceso general | Restringido | Nadie más puede abrirla |
+| Calendario | vmartinez@elpuig.xeill.net | Ver todos los detalles | Sí, lo pide la práctica |
+| Calendario | rusben@elpuig.xeill.net | Ver todos los detalles | Sí, para que el profesor pueda revisarlo |
+| Mapa (cuenta personal) | Cualquiera con el enlace | Solo ver | Es la única forma de que lo abran desde la cuenta del instituto |
 
 He revisado los permisos y no hay ninguno que sobre: nadie tiene permiso de edición excepto yo.
 
@@ -305,23 +307,23 @@ Prueba de la fórmula IF superando el presupuesto (prueba nº 14):
 
 | # | Prueba | Resultado esperado | Resultado obtenido |
 |---|---|---|---|
-| 1 | Abrir el calendario CALENDARI_DANIEL_MARTIN_MARRUPE | Sale en "Mis calendarios" con este nombre exacto |  Correcto |
-| 2 | Ver la semana del 22 al 28/12/2026 | Hay un evento cada día y la barra "Viaje a Portugal" del 22 al 28 |  Correcto |
-| 3 | Abrir un evento del viaje | Tiene lugar y descripción con las actividades |  Correcto |
-| 4 | Evento repetido "Llamar a casa" | Sale cada día del 22 al 28 y **no** sale el 29 |  Correcto: sale a las 21:00 del 22 al 28 y el 29 ya no aparece |
-| 5 | Recordatorio del vuelo de ida | Tiene una notificación 1 hora antes, otra 1 día antes y un correo 2 horas antes |  Correcto |
-| 6 | Invitar a vmartinez al evento del Día 6 | Le llega la invitación y yo veo "1 en espera" |  Correcto |
-| 7 | vmartinez responde "Sí" a la invitación | En el evento sale como "Asistirá" y me llega un correo con su respuesta |  Correcto: sale "1 sí" con un ✓ verde |
-| 8 | Lista de tareas "Reservas viaje Portugal" | Tiene 8 tareas con fecha límite |  Correcto |
-| 9 | Las tareas salen en el calendario | Cada tarea sale el día de su fecha límite |  Correcto: salen como "Vencimiento" los días 1, 10, 15 y 21 de diciembre |
-| 10 | Compartir el calendario con vmartinez | Tiene el permiso "Ver todos los detalles" |  Correcto |
-| 11 | vmartinez abre mi calendario desde su cuenta | Ve los eventos con todos los detalles, pero no los puede editar |  Correcto: le salen todos los eventos del 22 al 28 en su calendario |
-| 12 | Permisos de la hoja del presupuesto | Solo rusben como Comentador; acceso general Restringido |  Correcto |
-| 13 | Abrir el enlace de la hoja en incógnito, sin cuenta | No se ve la hoja: pide iniciar sesión o sale "Necesitas acceso" |  Correcto: redirige a la pantalla de inicio de sesión de Google y no se ve ningún dato |
-| 14 | Cambiar un precio para que el total pase de 1.500 € | La celda IF cambia a "T'has passat" |  Correcto: con la comida a 200 € el total sube a 1.920 € y sale "T'has passat". Después he vuelto a dejar 40 € |
-| 15 | Abrir el enlace del mapa en una ventana de incógnito | Se ve la ruta sin poder editarla |  Correcto: en incógnito y sin iniciar sesión se ven las dos capas y no hay herramientas de edición |
-| 16 | La ruta dura 7 días y vuelve al punto de salida | Barcelona → … → Barcelona |  Correcto |
-| 17 | Verificación en dos pasos | Comprobar su estado |  Comprobado: desactivada (justificado en el apartado anterior) |
+| 1 | Abrir el calendario CALENDARI_DANIEL_MARTIN_MARRUPE | Sale en "Mis calendarios" con este nombre exacto | Correcto |
+| 2 | Ver la semana del 22 al 28/12/2026 | Hay un evento cada día y la barra "Viaje a Portugal" del 22 al 28 | Correcto |
+| 3 | Abrir un evento del viaje | Tiene lugar y descripción con las actividades | Correcto |
+| 4 | Evento repetido "Llamar a casa" | Sale cada día del 22 al 28 y **no** sale el 29 | Correcto: sale a las 21:00 del 22 al 28 y el 29 ya no aparece |
+| 5 | Recordatorio del vuelo de ida | Tiene una notificación 1 hora antes, otra 1 día antes y un correo 2 horas antes | Correcto |
+| 6 | Invitar a vmartinez al evento del Día 6 | Le llega la invitación y yo veo "1 en espera" | Correcto |
+| 7 | vmartinez responde "Sí" a la invitación | En el evento sale como "Asistirá" y me llega un correo con su respuesta | Correcto: sale "1 sí" con un ✓ verde |
+| 8 | Lista de tareas "Reservas viaje Portugal" | Tiene 8 tareas con fecha límite | Correcto |
+| 9 | Las tareas salen en el calendario | Cada tarea sale el día de su fecha límite | Correcto: salen como "Vencimiento" los días 1, 10, 15 y 21 de diciembre |
+| 10 | Compartir el calendario con vmartinez | Tiene el permiso "Ver todos los detalles" | Correcto |
+| 11 | vmartinez abre mi calendario desde su cuenta | Ve los eventos con todos los detalles, pero no los puede editar | Correcto: le salen todos los eventos del 22 al 28 en su calendario |
+| 12 | Permisos de la hoja del presupuesto | Solo rusben como Comentador; acceso general Restringido | Correcto |
+| 13 | Abrir el enlace de la hoja en incógnito, sin cuenta | No se ve la hoja: pide iniciar sesión o sale "Necesitas acceso" | Correcto: redirige a la pantalla de inicio de sesión de Google y no se ve ningún dato |
+| 14 | Cambiar un precio para que el total pase de 1.500 € | La celda IF cambia a "T'has passat" | Correcto: con la comida a 200 € el total sube a 1.920 € y sale "T'has passat". Después he vuelto a dejar 40 € |
+| 15 | Abrir el enlace del mapa en una ventana de incógnito | Se ve la ruta sin poder editarla | Correcto: en incógnito y sin iniciar sesión se ven las dos capas y no hay herramientas de edición |
+| 16 | La ruta dura 7 días y vuelve al punto de salida | Barcelona → … → Barcelona | Correcto |
+| 17 | Verificación en dos pasos | Comprobar su estado | Comprobado: desactivada (justificado en el apartado anterior) |
 
 
 ## Para subir nota: itinerario en HTML (GitHub Pages)
