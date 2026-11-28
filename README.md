@@ -322,3 +322,10 @@ Prueba de la fórmula IF superando el presupuesto (prueba nº 14):
 | 15 | Abrir el enlace del mapa en una ventana de incógnito | Se ve la ruta sin poder editarla |  Correcto: en incógnito y sin iniciar sesión se ven las dos capas y no hay herramientas de edición |
 | 16 | La ruta dura 7 días y vuelve al punto de salida | Barcelona → … → Barcelona |  Correcto |
 | 17 | Verificación en dos pasos | Comprobar su estado |  Comprobado: desactivada (justificado en el apartado anterior) |
+
+
+## Para subir nota: itinerario en HTML (GitHub Pages)
+
+He creado una página web con el itinerario del viaje, publicada con GitHub Pages:
+
+### 🌐 [Ver la página del viaje a Portugal](https://dmartin-elpuig.github.io/RA5-Viaje-Portugal/)
